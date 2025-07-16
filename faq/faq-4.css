@@ -11,10 +11,13 @@ p {
 }
 
 .main-btn {
+    display: block;
+    margin-top: 20px;
     margin-left: 20px;
     font-size: 20px;
     color: #f0711d;
 }
+
 .container {
     max-width: 800px;
     margin: 50px auto;
