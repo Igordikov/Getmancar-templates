@@ -1,0 +1,114 @@
+/* faq-1.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+}
+
+p {
+    line-height: 1.3;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.subtitle {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.subtitle::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #f0711d;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.faq-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.faq-question {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    color: black;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease, color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f0f0f0;
+    transform: rotate(1deg);
+    color:#f0711d;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.5s ease, transform 0.5s ease;
+    padding: 0 20px;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px; /* Достаточно большое значение для содержимого */
+    opacity: 1;
+    transform: scaleY(1);
+    padding: 20px 20px 40px 20px;
+}
+
+.faq-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(0,123,255,0.1), rgb(235, 99, 8)123,255,1);
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.faq-item.active::before {
+    transform: scaleX(1);
+}
+
+.faq-question i {
+    font-size: 1em;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}

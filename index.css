@@ -1,0 +1,36 @@
+.flex-container {
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+  flex-wrap: wrap;
+    box-sizing: border-box; 
+}
+
+.button-link {
+    display: inline-block;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #fff; /* Белый текст */
+    background-color: #007bff; /* Синий фон */
+    padding: 10px 20px; /* Отступы */
+    border-radius: 8px; /* Закругленные углы */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: all 0.3s ease; /* Анимация при наведении */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+.button-link:hover {
+    background-color: #0056b3; /* Темно-синий фон при наведении */
+    transform: translateY(-3px); /* Легкий подъем */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+}
+
+.button-link:active {
+    transform: translateY(1px); /* Небольшое нажатие */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Слабая тень */
+}

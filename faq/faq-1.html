@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="../faq/faq-1.css">
+
+</head>
+<body>
+     <!-- FAQ -->
+
+     <section id="faq">
+        <div class="container">
+          <h2 class="subtitle" id="faq">FAQ</h2>
+          <div class="faq-item">
+            <h3 class="faq-question">Как сэкономить на аренде авто в Киеве?</h3>
+            <div class="faq-answer">
+              <p>Ориентируйся на доступные модели вроде Ravon R2 или Ford Fiesta — это выгодное решение.
+                Лучше бронировать заранее: это даёт шанс получить скидку или воспользоваться акцией.
+                Помни, бензин оплачивается отдельно, но действует простое правило — возвращай машину с тем же количеством топлива, что и при получении.
+                Оплата — только за реально использованное время, без скрытых комиссий и сюрпризов.
+                </p>
+            </div>
+          </div>
+      
+          <div class="faq-item">
+            <h3 class="faq-question">Какие автомобили доступны в Getmancar в Киеве?</h3>
+            <div class="faq-answer">
+              <h4>Эконом-класс:</h4>
+            <ul>
+              <li>Ford Fiesta</li>
+              <li>Ravon R2</li>
+              <li>Ford Focus Wagon</li>
+              <li>Skoda Rapid</li>
+            </ul>
+
+            <h4>Седаны на среднесрочную аренду:</h4>
+            <ul>
+              <li>Mazda 3</li>
+              <li>Hyundai Kona</li>
+            </ul>
+            
+            <h4>Премиум и бизнес-сегмент:</h4>
+            <ul>
+              <li>VW Jetta (6-го и 7-го поколений)</li>
+              <li>Hyundai Elantra</li>
+              <li>Skoda Octavia</li>
+              <li>VW Passat</li>
+            </ul>
+
+            <h4>Внедорожники (SUV):</h4>
+            <ul>
+              <li>VW Tiguan</li>
+              <li>VW Passat (в некоторых вариантах исполнений)</li>
+              <li>Nissan Juke</li>
+              <li>Ford Escape</li>
+            </ul>
+            </div>
+          </div>
+      
+          <div class="faq-item">
+            <h3 class="faq-question">Что выгоднее: каршеринг или аренда машины?</h3>
+            <div class="faq-answer">
+              <p>Если вы планируете пользоваться автомобилем долго — от суток и больше — аренда через Getmancar окажется более экономичным вариантом.
+                Вы получаете фиксированную суточную цену, никаких скрытых платежей и возможность сэкономить благодаря скидкам на длительный срок.
+                Каршеринг, напротив, лучше подходит для коротких поездок на час-два: вы платите только за минуты, но при длительном использовании стоимость может оказаться выше аренды.
+                </p>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      
+      <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+  button.addEventListener('click', () => {
+    const faqItem = button.parentElement;
+
+    // Убираем active у других элементов, если это нужно
+    document.querySelectorAll('.faq-item').forEach(item => {
+      if (item !== faqItem) {
+        item.classList.remove('active');
+      }
+    });
+
+    // Переключаем текущий элемент
+    faqItem.classList.toggle('active');
+  });
+});
+
+    
+    </script>
+</body>
+</html>
